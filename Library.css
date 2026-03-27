@@ -1,0 +1,164 @@
+.library-container {
+  width: 100%;
+  margin: 0;
+}
+
+/* FADE TRANSITION */
+.fade-in-home {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ---------- MAIN LIBRARY CONTAINER ---------- */
+.library-section {
+  padding: 20px 40px;
+}
+
+/* ---------- SEARCH (POSITIONED ON SIDE) ---------- */
+.library-search-section {
+  display: flex;
+  justify-content: flex-end; /* move to right side */
+  padding: 10px 40px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.search-wrapper-library {
+  position: relative;
+  width: 280px;
+}
+
+.searchlibrary {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+/* suggestions dropdown */
+.search-suggestions-library {
+  position: absolute;
+  top: 42px;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestion-item-library {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item-library:hover {
+  background: #f2f2f2;
+}
+
+/* ---------- TABS ---------- */
+.tabs-library {
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.section-btn-library {
+  margin-top: 0;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #e6e6e6;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.section-btn-library.active {
+  background: #081C45; /* orange highlight */
+  color: white;
+}
+
+.section-btn-library:hover {
+  background: #dcdcdc;
+}
+
+/* ---------- BOOK GRID ---------- */
+.books-grid-library {
+  display: flex;
+  justify-content: flex-start; /* 👈 CENTER GRID */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ---------- BOOK CARD ---------- */
+.book-card-library {
+  width: 200px;
+  height: 320px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  
+}
+
+.book-card-library img {
+  width: 180px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0 0 10px;
+}
+
+/* ---------- BOOK TILE ---------- */
+.book-title-library {
+  margin: 10px 0 20px 10px;
+  font-size: 14px;
+  font-weight: 500;
+
+  min-height: 40px; /* 👈 para pantay kahit mahaba/maiksi title */
+}
+
+/* ---------- BUTTONS ---------- */
+.library-button {
+  margin-top: auto;   /* 👈 ito pinaka important */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #444;
+  color: #e6e6e6;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
+
+.library-button.delete {
+  background: #444;
+}
+
+/* ---------- EMPTY STATE ---------- */
+.no-books-library {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: #777;
+}

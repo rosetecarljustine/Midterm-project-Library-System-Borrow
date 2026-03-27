@@ -1,0 +1,256 @@
+
+.home-container {
+  width: 100%;
+  margin: 0;
+}
+
+/* FADE TRANSITION */
+.fade-in-home {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.h2-home {
+  margin: 0 20px 15px 28px;
+}
+/* HERO */
+.hero-home {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.hero-home img {
+  width: 77%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 20px auto 0 auto;
+  display: block;
+  filter: brightness(80%);
+}
+
+.hero-text-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;                  /* ✅ center properly */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: xx-large;
+}
+
+/* SECTION */
+.section-home {
+  margin-bottom: 40px;
+  padding: 0 8%;
+}
+
+.filter-container-home {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  margin-top: 40px;
+  margin-left: 130px;
+}
+
+.filter-dropdown-home select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filtered-section-home {
+  padding: 20px 5%;   /* ✅ same horizontal spacing as carousel */
+}
+
+.filter-buttons-home {
+  display: flex;
+  gap: 10px;
+  padding: 15px 30px;
+
+}
+
+.filter-buttons-home button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-buttons-home button:hover {
+  background: #0077ff;
+  color: white;
+}
+
+.filter-dropdown-home {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-dropdown-home select {
+  padding: 10px 35px 10px 15px; /* right padding para sa arrow */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  cursor: pointer;
+
+  appearance: none;        /* ❗ remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: white;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* ✅ ilapit sa text */
+  background-size: 16px;
+}
+
+.filtered-section-home h2 {
+  margin-left: 93px;
+  margin-bottom: 16px;
+  font-size: large;
+}
+
+.filtered-section-home .books-grid-home {
+  margin-top: 5px;
+  margin-left: 95px;
+}
+
+
+.h2-home {
+  margin-left: 49px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.carousel-wrapper-home {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-home {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  padding: 10px 50px; /* space for buttons */
+}
+
+.books-grid-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;   /* ✅ align like carousel */
+  gap: 16px;                     /* ✅ same gap as carousel */
+  margin-left: 90px;    
+  margin-right: 90px;
+  margin-top: 10px;            /* ✅ same left/right spacing */
+}
+
+/* CARD */
+.card-home {
+  width: 181px;
+  height: 260px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.card-home:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card-home img {
+  width: 100%;
+  height: 100%;
+}
+
+/* TITLE OVERLAY */
+.card-home p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  margin: 0;
+}
+
+/* BUTTONS */
+.next-btn-home,
+.prev-btn-home {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: 0.2s;
+  user-select: none;
+  margin-left: 2.1%;
+}
+
+.prev-btn-home,
+.next-btn-home {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LEFT BUTTON */
+.prev-btn-home {
+  left: 4px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* RIGHT BUTTON */
+.next-btn-home {
+  right: 35px;
+}
+
+/* DISABLED */
+.prev-btn-home:disabled,
+.next-btn-home:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

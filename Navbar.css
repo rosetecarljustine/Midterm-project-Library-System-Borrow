@@ -1,0 +1,235 @@
+.navbar {
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 30px 10px;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-navbar {
+  width: 90px;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 50%;
+
+  margin-top: 20px;
+}
+
+.nav-links span {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.nav-links span:active {
+  color: #081C45;
+  border-radius: 5px;
+  transform: 1s;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 45px;
+  font-weight: bold;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.search {
+  width: 300px;
+  max-width: 100%;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* control spacing */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.profile {
+  width: 35px;
+  height: 35px;
+  background: #0077ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+
+.profile-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  padding: 20px;
+  z-index: 999;
+  border: 1px solid #ddd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -21px; /* taas ng arrow */
+  right: 20px; /* adjust depende sa profile icon */
+
+  border-width: 11px;
+  border-style: solid;
+
+  /* triangle color */
+  border-color: transparent transparent rgb(197, 193, 193) transparent;
+  z-index: -1;
+}
+
+.profile-dropdown::after {
+  content: "";
+  position: absolute;
+  top: -21px;
+  right: 20px;
+
+  border-width: 11px;
+  border-style: solid;
+
+  border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+  z-index: -1;
+}
+
+.profile-dropdown .profile-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #b3b2b1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.info-box label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #555;
+}
+
+.info-box span {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f9f9f9;
+
+  /* ✨ IMPORTANT (truncate long text) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-btn {
+  width: 70%;
+  padding: 10px 0;
+  background-color: #0B3D91;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logout-btn:hover {
+  background-color: #005bb5;
+}
+
+.icon {
+  border-radius: 50%;
+  padding: 8px 12px;
+  margin-top: 0;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.icon:hover,
+.profile:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

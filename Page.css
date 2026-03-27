@@ -1,0 +1,214 @@
+/* FADE TRANSITION */
+.fade-in-page {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-layout-page {
+  padding: 0;
+  color: #222; /* or black */
+}
+
+/* Top card full width and flush to edges */
+.top-section-page {
+  background-color: #fff;
+  border-radius: 0; /* remove rounding to touch edges, or keep small if you like */
+  padding: 0;       /* no padding for outer edges */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center; /* centers inner content */
+  flex-wrap: wrap;
+  width: 100vm; /* full viewport width */
+  margin-left: 0;    /* remove margin */
+}
+
+/* Inner content stays centered inside the full-width card */
+.top-section-inner {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px; /* content max width */
+  width: 100%;
+  padding: 30px;      /* spacing inside the card */
+}
+
+.main-cover-page {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.top-info-page {
+  width: 350px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push stats & button to bottom */
+  gap: 20px; /* spacing between elements */
+}
+
+.top-info-page h1 {
+  margin-top: 7%;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.stats-page {
+  display: flex;
+  gap: 15px; /* fixed spacing between stats */
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 2%;
+}
+
+.borrow-btn-page {
+  background: #0B3D91;
+  border: none;
+  padding: 10px 20px;
+  width: 70%;  
+  height: 15%;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.bottom-section-page {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto; /* CENTER */
+}
+
+.bottom-left-page {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.bottom-right-page {
+  flex: 1;
+}
+
+.genre-label-page {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  background-color: #cccaca;
+}
+
+.author-page, .type-page,
+.description-page,
+.genres-page {
+  margin-left: 12px;
+  margin-bottom: 15px;
+}
+
+.type-badge-page {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+
+.h2-page {
+  color: black;
+  margin: 20px 0 20px 20px;
+}
+.carousel-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 300px; 
+  overflow-y: auto;
+  padding-right: 5px;
+  scroll-behavior: smooth;
+  margin-right: 60px;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* scrollbar track (background) */
+.carousel-page::-webkit-scrollbar {
+  width: 15px;        /* width ng scrollbar */
+  height: 8px;       /* height kung horizontal scrollbar */
+}
+
+/* scrollbar thumb (moveable part) */
+.carousel-page::-webkit-scrollbar-thumb {
+  background-color: #161515; /* kulay ng thumb */
+  border-radius: 10px;       /* rounded edges */
+  border: 3px solid #fff;    /* spacing between track and thumb */
+}
+
+/* scrollbar track (background) */
+.carousel-page::-webkit-scrollbar-track {
+  background: #f0f0f0;       /* kulay ng track */
+  border-radius: 10px;
+}
+.book-card-page {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-height: 150px;
+  flex-shrink: 0;
+}
+
+.book-card-page img {
+   width: 80px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.card-content-page {
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.card-title-page {
+  margin-top: 0;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.card-type-page {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-desc-page {
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: left;
+  margin-right: 0;
+}

@@ -1,0 +1,62 @@
+.notifications {
+  padding: 20px 40px;
+}
+
+/* TITLE */
+.notifications h2 {
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+
+/* CARD STYLE */
+.notif-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 LEFT ALIGN */
+  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  border-left: 10px solid transparent;
+}
+
+/* HOVER EFFECT */
+.notif-card:hover {
+  background: #f9f9f9;
+}
+
+/* MESSAGE TEXT */
+.notif-card p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left; /* 👈 hindi naka-center */
+}
+
+/* TIME (nasa gilid / right side) */
+.notif-card span {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+
+  align-self: flex-start; /* 👈 ilagay sa right side */
+}
+
+.notif-card.borrow {
+  border-left-color: #0077ff;
+
+}
+
+.notif-card.return {
+  border-left-color: #28a745;
+}
+
+.notif-card.delete {
+  border-left-color: #dc3545;
+  padding: 10px;
+}
